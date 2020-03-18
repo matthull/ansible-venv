@@ -4,6 +4,11 @@
 - name: Verify
   hosts: all
   tasks:
-  - name: Example assertion
+  - name: Stat venv1
+    stat:
+      path: /tmp/venv_1/bin/python
+    register: venv_1
+
+  - name: Check venv1 was created
     assert:
-      that: true
+      that: venv_1.stat.executable

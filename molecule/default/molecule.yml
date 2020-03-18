@@ -5,9 +5,28 @@ driver:
   name: docker
 platforms:
   - name: instance
-    image: docker.io/pycontribs/centos:7
+    image: python:3.8.2-slim-buster
     pre_build_image: true
 provisioner:
   name: ansible
+  inventory:
+    group_vars:
+        all:
+          venv_path: /tmp/venv_1
+scenario:
+  test_sequence:
+    - dependency
+    - lint
+    - cleanup
+    - destroy
+    - syntax
+    - create
+    - prepare
+    - converge
+    # - idempotence
+    - side_effect
+    - verify
+    - cleanup
+    - destroy
 verifier:
   name: ansible

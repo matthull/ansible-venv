@@ -1,2 +1,5 @@
 ---
-# tasks file for matthull.venv
+
+# We're assuming python 3.x is available on path as python3
+- name: 
+  shell: python3 -m venv {{ venv_path }}

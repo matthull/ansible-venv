@@ -1,2 +1,2 @@
 ---
-# defaults file for matthull.venv
+venv_python_path: python3
