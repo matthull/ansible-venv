@@ -12,7 +12,7 @@ install:
 before_script:
   # Use actual Ansible Galaxy role name for the project directory.
   - cd ../
-  - mv ansible-python matthull.venv
+  - mv ansible-venv matthull.venv
   - cd matthull.venv
 
 script:
