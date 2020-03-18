@@ -1,0 +1,22 @@
+---
+language: python
+services: docker
+
+install:
+  # Install molecule and friends
+  - pip install ansible molecule ansible-lint yamllint docker
+
+  # Check ansible version
+  - ansible --version
+
+before_script:
+  # Use actual Ansible Galaxy role name for the project directory.
+  - cd ../
+  - mv ansible-python matthull.venv
+  - cd matthull.venv
+
+script:
+  - molecule test
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
