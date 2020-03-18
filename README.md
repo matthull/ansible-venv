@@ -1,5 +1,6 @@
 matthull.venv - Ansible role
 =========
+[![Build Status](https://travis-ci.org/matthull/ansible-venv.svg?branch=master)](https://travis-ci.org/matthull/ansible-venv)
 
 Sets up one or more venvs
 
