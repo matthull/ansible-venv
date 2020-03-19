@@ -14,8 +14,8 @@ Role Variables
 Just list one or more locations you'd like to install python to.
 
 ```YAML
-venv_paths: - /home/app/pythonenv     #required
-venv_python_path: /usr/bin/python3.8  #optional
+venv_path: /home/app/pythonenv     # required - the location to create venv at
+venv_python_path: /usr/bin/python3.8  # optional - the python to create venv with
 ```
 
 Example Playbook
